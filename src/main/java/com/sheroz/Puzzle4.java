@@ -32,7 +32,7 @@ class Puzzle4b {
             return ivar * factor;
         }
         else {
-            return ivar*(2+ factor );
+            return ivar*(5- factor );
         }
 
     }
