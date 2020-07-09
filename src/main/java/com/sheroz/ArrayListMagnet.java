@@ -19,9 +19,10 @@ public class ArrayListMagnet {
         }
         if(a.contains("two"));{
             a.add("2.2");
+            }
             printAL(a);
 
-        }
+
         }
     public static void printAL(ArrayList<String> al) {
  for (String element : al){
