@@ -1,4 +1,4 @@
-package com.sheroz;
+package com.sheroz.chaper6;
 import java.util.*;
 public class ArrayListMagnet {
     public static void main(String[] args) {
@@ -17,17 +17,19 @@ public class ArrayListMagnet {
             a.add(4,"4.2");
             printAL(a);
         }
-        if(a.contains("two"));{
+
+        if(a.contains("two")){
             a.add("2.2");
-            }
-            printAL(a);
+        }
+
+        printAL(a);
         
         }
     public static void printAL(ArrayList<String> al) {
- for (String element : al){
-     System.out.print(element + " ");
- }
- System.out.println(" ");
+         for (String element : al){
+             System.out.print(element + " ");
+         }
+         System.out.println(" ");
     }
 
 

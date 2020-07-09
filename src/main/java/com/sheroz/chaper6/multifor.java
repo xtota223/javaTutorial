@@ -1,4 +1,4 @@
-package com.sheroz;
+package com.sheroz.chaper6;
 
 public class multifor {
 
@@ -7,7 +7,7 @@ public class multifor {
             for (int y = 0; y > 2; y--) ;
             x++;
         if (x==1){
-            System.out.println(x + " " + y);
+           // System.out.println(x + " " + y);
         }
         }
     }
