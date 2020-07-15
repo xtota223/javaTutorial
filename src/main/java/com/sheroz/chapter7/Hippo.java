@@ -4,7 +4,7 @@ public class Hippo extends Animal{
 
   public Hippo() {
     food= "Grass";
-    
+
   }
 
   @Override
