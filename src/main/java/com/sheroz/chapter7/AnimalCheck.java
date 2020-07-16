@@ -8,8 +8,6 @@ public class AnimalCheck {
     Hippo hp = new Hippo();
     hp.makeNoise();
     hp.eat();
-
-
   }
 
 }
