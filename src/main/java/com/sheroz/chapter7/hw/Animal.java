@@ -1,6 +1,6 @@
 package com.sheroz.chapter7.hw;
 
-public class Animal {
+public  abstract class Animal extends Object{
     String picture ;
     String food;
     Integer hunger;
@@ -11,6 +11,8 @@ public class Animal {
     void makeNoise () {
         System.out.println( "make noise :" + hunger );
     }
+
+    abstract void type() ;
     void eat () {
         System.out.println( "eat : " + food );
     }
@@ -28,16 +30,30 @@ class Feline extends Animal {
     void roam() {
         super.roam();
     }
+
+    int  roam(int i){
+        return 1;
+    }
+
+    @Override
+    void type() {
+        System.out.println(  "Feline");
+    }
 }
 
 class Lion extends Feline{
+
+    @Override
+    void eat() {
+
+    }
+
     @Override
     void makeNoise() {
-        super.makeNoise();{System.out.print("lion noise");
-            void eat()
+        //super.makeNoise();
+        System.out.println("lion noise");
 
-        }
-}
+    }
 }
 
 class Tiger extends Feline {
