@@ -2,7 +2,7 @@ package com.sheroz.Scanner;
 
 import java.util.*;
 
-public class Short {
+public class Shortt {
     public static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {

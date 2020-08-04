@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Demo {
 
+
     public static void main(String[] args) {
 
         /* This reads the input provided by user

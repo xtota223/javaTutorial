@@ -2,14 +2,14 @@ package com.sheroz.Scanner;
 
 import java.util.*;
 
-public class String {
+public class Longt {
     public static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
 
-        System.out.println("any text");
+        System.out.println("any long number");
 
-        java.lang.String x = sc.next();
+        long x = sc.nextLong();
 
         System.out.println("You entered" + x + " ");
 

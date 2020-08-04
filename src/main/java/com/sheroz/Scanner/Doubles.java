@@ -2,7 +2,7 @@ package com.sheroz.Scanner;
 
 import java.util.*;
 
-public class Double {
+public class Doubles {
     public static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -13,4 +13,6 @@ public class Double {
 
         System.out.println("You entered" + x + " ");
     }
+
+
 }
