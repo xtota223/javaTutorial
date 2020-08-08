@@ -43,21 +43,19 @@ class HomeWork2 {
         int y = 2;
         int c = 2;
         int d = 2;
-        
 
-//problem------------------------------------------------------------------------
-        if (c == (x ^ d)) {
+        boolean first = true;
+        boolean second = true;
+        boolean third = false;
+
+
+        if (first == (second  ^ third)) {
             System.out.println("c in equal to only  one of them");
         } else {
             System.out.println("c is equal to both of them or to none of them");
         }
-//problem------------------------------------------------------------------------
 
 
-
-boolean first = true;
-boolean second = true;
-boolean third = false;
 
 
          if (first == (third && second)) {
