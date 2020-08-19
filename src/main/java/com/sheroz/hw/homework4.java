@@ -7,14 +7,11 @@ public class homework4 {
         Scanner sc = new Scanner(System.in);
         System.out.print("Type in the number that you want to factor: ");
         int x = sc.nextInt();
-        System.out.print("The factors of"+x +"are:");
+        System.out.print("The factors of "+x +" are: ");
         for(int y =1; y<=x;y++){
-
-        int equal =x%y;
-        if (equal==0) {
-
-        System.out.print(y+", ");
-
+            int equal =x%y;
+            if (equal==0) {
+                System.out.print(y+", ");
            }
         }
     }

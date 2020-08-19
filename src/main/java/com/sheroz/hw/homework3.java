@@ -6,8 +6,7 @@ public class homework3 {
         Scanner sc = new Scanner(System.in);
         int y =sc.nextInt();
         for(int x =1;x<=10;x++) {
-            int sum =x*y;
-            System.out.println(y+ "x"+x+"="+ sum);
+            System.out.println(y+ "x"+x+"="+ (x*y));
         }
     }
 }
