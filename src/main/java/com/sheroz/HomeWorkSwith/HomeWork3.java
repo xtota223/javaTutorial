@@ -40,10 +40,10 @@ System.out.println("What is your grades?");
   if (average >=90){
       grade = "A";
   }
-  else if (average>=70& average<90) {
+  else if (average>=70 ) {
       grade = "B";
   }
-  else if (average >=50 & average < 70){
+  else if (average >=50){
       grade = "C";
   }
   else if (average <50){

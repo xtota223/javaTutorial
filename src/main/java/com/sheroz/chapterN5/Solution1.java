@@ -7,10 +7,12 @@ public class Solution1 {
         Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
-
-        for (int i = 1;i<=10; i++){
-           int result = n*i;
-           System.out.println(n + " x " + i +  " = " + result);}
+      int result=0;
+        for (int i = 1;i<=10; i++) {
+          result = n * i;
+          System.out.println(n + " x " + i + " = " + result);
         }
+    }
+
 }
 //complete

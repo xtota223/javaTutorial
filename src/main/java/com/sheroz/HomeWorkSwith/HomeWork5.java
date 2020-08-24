@@ -16,7 +16,6 @@ public class HomeWork5 {
     if (q>=100 & q<=120){
         discount= 0.10;
     }
-
     else if (q>120){
         discount=0.15;
     }
