@@ -25,9 +25,11 @@ public class ClassHomework {
         else
             System.out.println("wrong");
     }
+
     public static int getRandomNumber(int min, int max) {
         return (int) (Math.random() * (max - min + 1)+min );
     }
+
     public static int getGuess(int min, int max) {
         while (true) {
             int guess = sc.nextInt();
