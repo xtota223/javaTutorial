@@ -9,6 +9,7 @@ public class StringBuilderMethods {
         System.out.println("2. " + sb.charAt(1));
         System.out.println("3. " + sb.delete(0,5));
         System.out.println("4. " + sb.deleteCharAt(2));
+        //sb.ensureCapacity(1);
         //System.out.println("5. " + sb.ensureCapacity(1));
         //System.out.println("6. " + sb.capacity(1));
         System.out.println("7. " + sb.indexOf("day"));
@@ -24,7 +25,8 @@ public class StringBuilderMethods {
         System.out.println("17"+sb.substring(4));
         System.out.println("18"+sb.substring(4,6));
         System.out.println("19"+sb.toString());
-        //System.out.println("20"+sb.trimToSize(););
+        sb.trimToSize();
+        System.out.println("20"+sb);
 
 
 
