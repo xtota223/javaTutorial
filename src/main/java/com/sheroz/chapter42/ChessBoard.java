@@ -8,10 +8,10 @@ public class ChessBoard {
   }
 
   void findPoz(int x , int y) {
-      canIjump(x-2 , y+1);
-      canIjump(x-2 , y-1);
-      canIjump(x+2 , y+1);
-      canIjump(x+2 , y-1);
+    canIjump(x-2 , y+1);
+    canIjump(x-2 , y-1);
+    canIjump(x+2 , y+1);
+    canIjump(x+2 , y-1);
     canIjump(x+1 , y-2);
     canIjump(x-1 , y-2);
     canIjump(x+1 , y+2);
