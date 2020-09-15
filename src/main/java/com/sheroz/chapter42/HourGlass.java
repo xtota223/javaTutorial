@@ -7,22 +7,16 @@ import java.util.Scanner;
 public class HourGlass {
     static Scanner sc = new Scanner(System.in);
     public static void main (String []args){
-        int [][] num = new int[8][8];
-        int sum = 0;
+        int [][] num = { {1,1,1,0 ,0,0}, {0,1,0,0,0,0},{1,1,1,0 ,0,0} , {0,0,2,4 ,4 ,0}, {0,0,0,2 ,0 ,0}, {0,0,1,2 ,4 ,0} };
 
-        for (int y= 0; y<=5; y++){
-            for (int x=0; x<=5; x++){
-               num[y][x] = sc.nextInt();
+        Integer  max = null; int sum =0 ;
+        for (int a=0; a <=3; a ++) {
+            for (int b = 0; b <=3; b++) {
+                sum = num[a][b] + num[a][b + 1] + num[a][b + 2] + num[a + 1][b + 1] + num[a + 2][b] + num[a + 2][b + 1] + num[a + 2][b + 2];
+                if (max== null ||  max< sum  )  max = sum ;
             }
         }
-        int max = 0;
-        for (int a=0; a <=5; a ++) {
-           for (int b = 0; b <=5; b++) {
-               sum = num[a][b] + num[a][b + 1] + num[a][b + 2] + num[a + 1][b + 1] + num[a + 2][b] + num[a + 2][b + 1] + num[a + 2][b + 2];
-
-               }
-            }
-        System.out.println(sum);
+        System.out.println(max);
         }
     }
 
