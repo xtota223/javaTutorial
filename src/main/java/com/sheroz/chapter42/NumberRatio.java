@@ -11,30 +11,21 @@ public static void main (String []args){
     for(int i=0;i<5;i++) {
         arr[i] = sc.nextInt();
     }
-    int poz=0;
-    int neg=0;
-    int zer=0;
+    int poz=0, neg=0, zer=0;
 
-    for(int i=0;i<5;i++) {
-        if (arr[i]>0)
-            poz+=1;
-        else if (arr[i]<0)
-            neg+=1;
-        else if (arr[i]==0)
-            zer+=1;
+    for (int value : arr) {
+        if (value > 0)
+            poz += 1;
+        else if (value < 0)
+            neg += 1;
+        else
+            zer += 1;
     }
-    double pozf=(poz/arr.length);
-    double negf=(neg/arr.length);
-    double zerf=(zer/arr.length);
-
-    System.out.println(pozf+"\n"+negf+"\n"+zerf);
+    System.out.println( String.format( "%f", ( ((double) poz)/arr.length)));
+    System.out.println( String.format( "%f", ((double) neg/arr.length)));
+    System.out.println( String.format( "%f", ((double) zer/arr.length)));
 
     }
-
 }
-//   System.out.println("there is: "+poz+" positive numbers.\n"+
-//                     "there is: "+neg+" negative numbers.\n"+
-//                    "there is: "+zer+" zero numbers.\n");
-
 
 
