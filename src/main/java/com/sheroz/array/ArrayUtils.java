@@ -2,15 +2,15 @@ package com.sheroz.array;
 import java.util.Scanner;
 
 public class ArrayUtils {
-    Scanner sc = new Scanner(System.in);
+
   /*
       find max value from array
    */
   public static  int max(int[] arr) {
- int maxi= 0;
-    for (int i = 0; i<arr.length;i++)
+ int maxi= arr[0];
+    for (int i = 1; i<arr.length;i++)
       if (arr[i]>maxi)
-        arr[i]= maxi;
+         maxi=arr[i];
       return maxi;
   }
 
@@ -22,9 +22,9 @@ public class ArrayUtils {
    */
   public static  int max(int[] arr, int from) {
       int maxi= 0;
-      for (int i = 3; i<8;i++)
+    for (int i = from; i<arr.length;i++)
           if (arr[i]>maxi)
-              arr[i]= maxi;
+            maxi=arr[i];
       return maxi;
   }
 
@@ -43,8 +43,8 @@ public class ArrayUtils {
     find min value from array
  */
   public static int min(int[] arr) {
-      int min =100;
-      for (int i = 0; i<arr.length;i++)
+      int min =arr[0];
+      for (int i = 1; i<arr.length;i++)
           if (arr[i]<min)
               arr[i]=min;
       return min;
@@ -90,6 +90,36 @@ public class ArrayUtils {
       for (int i = 0; i<arr.length;i++)
           sum += arr[i];
       return sum;
+  }
+
+  /**
+   * find "value" position in array
+   * @param arr
+   * @param value
+   * @return
+   */
+  public static int findPosition (int[] arr, int value  ) {
+    return -1 ;
+  }
+
+
+  /**
+   * find if given value aready exist in array
+   * @param arr
+   * @param value
+   * @return
+   */
+  public static boolean isDuplicate(int[] arr ) {
+    return false;
+  }
+  /**
+   * find if given value aready exist in array
+   * @param arr
+   * @param value
+   * @return
+   */
+  public static boolean isDuplicate(int[] arr, int value  ) {
+    return false;
   }
 }
 

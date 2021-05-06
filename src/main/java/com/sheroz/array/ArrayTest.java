@@ -7,10 +7,13 @@ public class ArrayTest {
     int[] arr2 = {3,4,7,1,3 };
 
     System.out.println(ArrayUtils.max(arr1 )==40);
+    System.out.println(ArrayUtils.max(arr1, 3)==12);
     System.out.println(ArrayUtils.max(arr2 )==7);
     System.out.println(ArrayUtils.avrg(arr2 )==3 );
     System.out.println(ArrayUtils.min(arr2 )==1 );
     System.out.println(ArrayUtils.sum(arr1 )==18 );
+    System.out.println( ArrayUtils.findPosition(arr1, 40 )==2 );
+    System.out.println( ArrayUtils.isDuplicate(arr1, 1 ) );
 
   }
 }
