@@ -9,9 +9,8 @@ public class ArrayTest {
     System.out.println(ArrayUtils.max(arr1 )==40);
     System.out.println(ArrayUtils.max(arr2 )==7);
     System.out.println(ArrayUtils.avrg(arr2 )==3 );
-
+    System.out.println(ArrayUtils.min(arr2 )==1 );
+    System.out.println(ArrayUtils.sum(arr1 )==18 );
 
   }
-
-
 }

@@ -33,7 +33,18 @@ public class Solution {
 
     }
 
-    System.out.println( "first : " +  arrayList2d.get(1-1).get(3-1) );
+    for(int n = 0;n<size;n++){
+      int h =scanner.nextInt();
+      int w =scanner.nextInt();
+
+   if(size < arrayList2d.size()|size> arrayList2d.size()) {
+     System.out.println("ERROR!");
+        }
+     else System.out.println(arrayList2d.get(w-1).get(h-1)+"-------------");
+    }
+
+
+    //System.out.println( "first : " +  arrayList2d.get(1-1).get(3-1) );
 
 
     /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
