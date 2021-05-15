@@ -99,6 +99,14 @@ public class ArrayUtils {
    * @return
    */
   public static int findPosition (int[] arr, int value  ) {
+    int inp =4;
+      int num= arr[0];
+      for (int i =0; i<arr.length;i++)
+          if (arr[i]==inp)
+              return i;
+
+
+
     return -1 ;
   }
 
@@ -110,6 +118,11 @@ public class ArrayUtils {
    * @return
    */
   public static boolean isDuplicate(int[] arr ) {
+      int num =arr[0];
+      for (int i = 1; i<arr.length;i++)
+          for (int j=1;j<arr.length;j++)
+              if (arr[i] == arr[j])
+                  return true;
     return false;
   }
   /**
@@ -119,7 +132,15 @@ public class ArrayUtils {
    * @return
    */
   public static boolean isDuplicate(int[] arr, int value  ) {
-    return false;
+      int inp=4;
+      int duplicate =0;
+      int num =arr[0];
+      for (int i = 1; i<arr.length;i++)
+              if (inp== arr[i])
+                  duplicate=duplicate+1;
+              if (duplicate >0) ;
+return true;
+
   }
 }
 
