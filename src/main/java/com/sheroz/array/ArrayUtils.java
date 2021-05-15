@@ -1,4 +1,6 @@
 package com.sheroz.array;
+import com.sun.deploy.util.ArrayUtil;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ArrayUtils {
@@ -43,11 +45,7 @@ public class ArrayUtils {
     find min value from array
  */
   public static int min(int[] arr) {
-      int min =arr[0];
-      for (int i = 1; i<arr.length;i++)
-          if (arr[i]<min)
-              arr[i]=min;
-      return min;
+      return min(arr, 0);
 
   }
 
@@ -58,7 +56,11 @@ public class ArrayUtils {
    * @return
    */
   public static int min(int[] arr, int from ) {
-    return 0;
+    int min =arr[0];
+    for (int i = from; i<arr.length;i++)
+      if (arr[i]<min)
+        min=arr[i] ;
+    return min;
   }
 
   /**
@@ -99,13 +101,10 @@ public class ArrayUtils {
    * @return
    */
   public static int findPosition (int[] arr, int value  ) {
-    int inp =4;
-      int num= arr[0];
-      for (int i =0; i<arr.length;i++)
-          if (arr[i]==inp)
-              return i;
 
-
+      for (int i =0; i<arr.length;i++){
+        if (arr[i]==value) return i;
+      }
 
     return -1 ;
   }
@@ -118,12 +117,7 @@ public class ArrayUtils {
    * @return
    */
   public static boolean isDuplicate(int[] arr ) {
-      int num =arr[0];
-      for (int i = 1; i<arr.length;i++)
-          for (int j=1;j<arr.length;j++)
-              if (arr[i] == arr[j])
-                  return true;
-    return false;
+    return isDuplicate(arr, 0);
   }
   /**
    * find if given value aready exist in array
@@ -132,15 +126,52 @@ public class ArrayUtils {
    * @return
    */
   public static boolean isDuplicate(int[] arr, int value  ) {
-      int inp=4;
-      int duplicate =0;
-      int num =arr[0];
-      for (int i = 1; i<arr.length;i++)
-              if (inp== arr[i])
-                  duplicate=duplicate+1;
-              if (duplicate >0) ;
-return true;
+    for (int i = value; i<arr.length-1;i++) {
+      for (int j=i+1;j<arr.length;j++) {
+        if (arr[i] == arr[j]) return true;
+      }
+    }
+    return false;
 
   }
+
+  /**
+   *   find sum of 2 element in array with biggest sum
+   *
+   *   arr [3, 4,8] = 12
+   *   arr [1, 100, -2 , 12, 34] = 134
+   *   max = 134
+    */
+
+
+  public static int funBigSum(int[] arr) {
+    return 0 ;
+  }
+
+
+  /**
+   * compare sequence  of arrays equality
+   * arr1 [1,2, 3] arr2 [1,2, 3]  = true
+   * arr1 [1,2, 3] arr2 [1,4]  = false
+   * @param arr
+   * @return
+   */
+
+  public static boolean compare(int[] arr1, int[] arr2) {
+    return false;
+  }
+
+  /**
+   * compare  elements  of arrays equality
+   * arr1 [1,3, 2] arr2 [1,2, 3]  = true
+   * arr1 [1,2, 3] arr2 [1,4]  = false
+   * @param arr
+   * @return
+   */
+
+  public static boolean compareElements (int[] arr1, int[] arr2) {
+    return false;
+  }
+
 }
 
