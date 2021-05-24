@@ -1,5 +1,5 @@
 package com.sheroz.array;
-import com.sun.deploy.util.ArrayUtil;
+import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -144,10 +144,16 @@ public class ArrayUtils {
     */
 
 
-  public static int funBigSum(int[] arr) {
-    return 0 ;
+  public static int findBigSum(int[] arr) {
+      int bigsum=arr[0];
+      for(int i =0;i<arr.length;i++) {
+          for(int d= i+1;d<arr.length;d++)
+          if (arr[i] + arr[d] > bigsum) {
+              bigsum = arr[i] + arr[d];
+          }
+      }
+    return bigsum ;
   }
-
 
   /**
    * compare sequence  of arrays equality
@@ -157,7 +163,13 @@ public class ArrayUtils {
    * @return
    */
 
-  public static boolean compare(int[] arr1, int[] arr2) {
+  public static boolean compare(int[] arr3, int[] arr4) {
+
+      for(int i =0;i<arr3.length && i< arr4.length;i++){
+          if (arr3[i] == arr4[i]){
+              return true;
+          }
+      }
     return false;
   }
 
@@ -170,6 +182,11 @@ public class ArrayUtils {
    */
 
   public static boolean compareElements (int[] arr1, int[] arr2) {
+      for(int i=0;i< arr1.length;i++){
+          for (int d =0;d<arr2.length;d++){
+              if (arr1[i]==)
+          }
+      }
     return false;
   }
 
