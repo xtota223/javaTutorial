@@ -164,31 +164,50 @@ public class ArrayUtils {
    */
 
   public static boolean compare(int[] arr3, int[] arr4) {
-
-      for(int i =0;i<arr3.length && i< arr4.length;i++){
-          if (arr3[i] == arr4[i]){
-              return true;
+      if (arr3.length != arr4.length) return false;
+      for(int i =0;i<arr3.length ;i++){
+          if (arr3[i] != arr4[i]){
+              return false;
           }
       }
-    return false;
+    return true;
   }
 
   /**
    * compare  elements  of arrays equality
    * arr1 [1,3, 2] arr2 [1,2, 3]  = true
+   * arr1 [1,3, 2,1] arr2 [1,1, 2, 3]  = true      * arr1 [1,1, 2,3] arr2 [1,1, 2, 3]  = true
    * arr1 [1,2, 3] arr2 [1,4]  = false
    * @param arr
    * @return
    */
 
   public static boolean compareElements (int[] arr1, int[] arr2) {
-      for(int i=0;i< arr1.length;i++){
-          for (int d =0;d<arr2.length;d++){
-              if (arr1[i]==)
-          }
-      }
-    return false;
+
+    Arrays.sort(arr1);
+    Arrays.sort(arr2);
+    return compare(arr1, arr2);
   }
+
+  /**
+   *  Bubble sort
+   * @param arr1
+   * @return
+   */
+  public static boolean sort (int[] arr1) {
+    boolean wasChanged= true ;
+    while (wasChanged) {
+      wasChanged=false ;
+      for (sdfd) { // loop
+        if (a>b) { // compare
+          swap (a, b ) // swapp
+          wasChanged= true;
+        }
+      }
+      
+    }
+  }
+
 
 }
 
