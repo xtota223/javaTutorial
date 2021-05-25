@@ -204,8 +204,20 @@ public class ArrayUtils {
           wasChanged= true;
         }
       }
-      
+
     }
+  }
+
+  /**
+   * copy array from start position to end position
+   * @param arr1
+   * @param start
+   * @param end
+   * @return
+   */
+  public static int[] copy(int[] arr1, int start , int end ) {
+    int[] result = new int[end-start+1];
+    return arr1;
   }
 
 
