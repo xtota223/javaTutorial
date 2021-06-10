@@ -1,7 +1,6 @@
 package com.sheroz.array;
-import java.lang.reflect.Array;
+
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class ArrayUtils {
 
@@ -194,19 +193,19 @@ public class ArrayUtils {
    * @param arr1
    * @return
    */
-  public static boolean sort (int[] arr1) {
-    boolean wasChanged= true ;
-    while (wasChanged) {
-      wasChanged=false ;
-      for (sdfd) { // loop
-        if (a>b) { // compare
-          swap (a, b ) // swapp
-          wasChanged= true;
-        }
-      }
+  //public static boolean sort (int[] arr1) {
+   // boolean wasChanged= true ;
+   // while (wasChanged) {
+   //   wasChanged=false ;
+   //   for (sdfd) { // loop
+    //    if (a>b) { // compare
+    //      swap (a, b ) // swapp
+    //      wasChanged= true;
+    //    }
+   //   }
 
-    }
-  }
+  //  }
+ // }
 
   /**
    * copy array from start position to end position
@@ -215,11 +214,36 @@ public class ArrayUtils {
    * @param end
    * @return
    */
+
   public static int[] copy(int[] arr1, int start , int end ) {
     int[] result = new int[end-start+1];
-    return arr1;
+    for (int i=0; i<result.length;i++)
+        result[i]=arr1[i+start];
+
+    return result;
   }
 
 
+
+
+  //test sample for sort
+  public static int[] sorting (int[] arr1) {
+      boolean wasChanged = true;
+      while (wasChanged) {
+          wasChanged = false;
+          int a;
+          int b;
+          for (int i = 0; i < arr1.length; i++) {
+              a = arr1[i];
+              b = arr1[i + 1];
+              if (arr1[i] > arr1[i + 1]) {
+                  arr1[i + 1] = a;
+                  arr1[i] = b;
+                  wasChanged= true;
+              }
+          }
+      }
+      return arr1;
+  }
 }
 

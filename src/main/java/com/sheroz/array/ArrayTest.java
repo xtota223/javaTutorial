@@ -22,5 +22,6 @@ public class ArrayTest {
     System.out.println(ArrayUtils.findBigSum(arr2)==12);
     System.out.println(ArrayUtils.compare(arr3,arr4));
     System.out.println(ArrayUtils.compareElements(arr4,arr5));
+    System.out.println(ArrayUtils.sorting(arr1));
   }
 }
