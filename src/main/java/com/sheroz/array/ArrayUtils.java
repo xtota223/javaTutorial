@@ -207,7 +207,7 @@ public class ArrayUtils {
   //  }
  // }
 
-  /**
+  /**42
    * copy array from start position to end position
    * @param arr1
    * @param start
@@ -229,21 +229,39 @@ public class ArrayUtils {
   //test sample for sort
   public static int[] sorting (int[] arr1) {
       boolean wasChanged = true;
+      int a;
       while (wasChanged) {
           wasChanged = false;
-          int a;
-          int b;
-          for (int i = 0; i < arr1.length; i++) {
-              a = arr1[i];
-              b = arr1[i + 1];
+
+          for (int i = 0; i < arr1.length-1; i++) {
               if (arr1[i] > arr1[i + 1]) {
-                  arr1[i + 1] = a;
-                  arr1[i] = b;
-                  wasChanged= true;
+                swap(arr1, i , i+1);
+//                a = arr1[i];
+//                arr1[i ] =  arr1[i+1 ];
+//                arr1[i+1] = a;
+                wasChanged= true;
               }
           }
       }
       return arr1;
   }
+
+  public static  void swap(int[] arr1 , int a1 , int a2 ) {
+
+  }
+
+  public static  void search(int[] arr1 ) {
+
+  }
+
+
+  public static  void binarySearch(int[] arr1 ) {
+    arr1= sorting(arr1);
+
+  }
+
+
+
+
 }
 

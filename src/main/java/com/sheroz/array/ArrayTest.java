@@ -23,5 +23,6 @@ public class ArrayTest {
     System.out.println(ArrayUtils.compare(arr3,arr4));
     System.out.println(ArrayUtils.compareElements(arr4,arr5));
     System.out.println(ArrayUtils.sorting(arr1));
+    System.out.println(ArrayUtils.copy(arr1, 2,3 ));
   }
 }
