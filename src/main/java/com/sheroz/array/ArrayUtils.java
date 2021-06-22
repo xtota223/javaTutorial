@@ -218,9 +218,9 @@ public class ArrayUtils {
 
   public static  void swap(int[] arr1 , int a1 , int a2 ) {
       int a;
-            a=arr1[a2];
-            arr1[a2]=arr1[a1];
-            arr1[a1]=a;
+      a=arr1[a2];
+      arr1[a2]=arr1[a1];
+      arr1[a1]=a;
   }
 
   /**
@@ -275,7 +275,7 @@ public class ArrayUtils {
    *
    * @param arr1 given array
    * @param find find element
-   * @param replace change to 
+   * @param replace change to
    * @return return result
    */
   public int [] replace (int[] arr1, int find , int replace  ) {
