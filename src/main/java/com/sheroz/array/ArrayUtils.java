@@ -1,5 +1,7 @@
 package com.sheroz.array;
 
+import com.sun.xml.internal.ws.policy.EffectiveAlternativeSelector;
+
 import java.util.Arrays;
 
 public class ArrayUtils {
@@ -188,32 +190,6 @@ public class ArrayUtils {
     return compare(arr1, arr2);
   }
 
-  /**
-   *  Bubble sort
-   * @param arr1
-   * @return
-   */
-  //public static boolean sort (int[] arr1) {
-   // boolean wasChanged= true ;
-   // while (wasChanged) {
-   //   wasChanged=false ;
-   //   for (sdfd) { // loop
-    //    if (a>b) { // compare
-    //      swap (a, b ) // swapp
-    //      wasChanged= true;
-    //    }
-   //   }
-
-  //  }
- // }
-
-  /**42
-   * copy array from start position to end position
-   * @param arr1
-   * @param start
-   * @param end
-   * @return
-   */
 
   public static int[] copy(int[] arr1, int start , int end ) {
     int[] result = new int[end-start+1];
@@ -222,9 +198,6 @@ public class ArrayUtils {
 
     return result;
   }
-
-
-
 
   //test sample for sort
   public static int[] sorting (int[] arr1) {
@@ -247,16 +220,31 @@ public class ArrayUtils {
   }
 
   public static  void swap(int[] arr1 , int a1 , int a2 ) {
-
+      int a;
+            a=arr1[a2];
+            arr1[a2]=arr1[a1];
+            arr1[a1]=a;
   }
 
-  public static  void search(int[] arr1 ) {
+  public static  void search(int[] arr1) {
+      for (int i = 0; i < arr1.length; i++) {
+          if (arr1[i] == )
 
+      }
   }
+
+
 
 
   public static  void binarySearch(int[] arr1 ) {
     arr1= sorting(arr1);
+    boolean numb= true;
+    while (numb){
+
+    }
+
+
+
 
   }
 
