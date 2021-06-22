@@ -1,8 +1,8 @@
 package com.sheroz.array;
 
-import com.sun.xml.internal.ws.policy.EffectiveAlternativeSelector;
 
 import java.util.Arrays;
+import java.util.Collections;
 
 public class ArrayUtils {
 
@@ -209,9 +209,6 @@ public class ArrayUtils {
           for (int i = 0; i < arr1.length-1; i++) {
               if (arr1[i] > arr1[i + 1]) {
                 swap(arr1, i , i+1);
-//                a = arr1[i];
-//                arr1[i ] =  arr1[i+1 ];
-//                arr1[i+1] = a;
                 wasChanged= true;
               }
           }
@@ -226,28 +223,64 @@ public class ArrayUtils {
             arr1[a1]=a;
   }
 
-  public static  void search(int[] arr1) {
+  /**
+   *
+   * @param arr1 array to search
+   * @param searchNumber number to search
+   * @return return position of searchNumber or return -1 if can't fnd it
+   */
+  public static int  search(int[] arr1, int searchNumber ) {
       for (int i = 0; i < arr1.length; i++) {
-          if (arr1[i] == )
-
+          if (arr1[i] ==searchNumber  ) return i ;
       }
+      return  -1 ;
   }
 
 
-
-
-  public static  void binarySearch(int[] arr1 ) {
-    arr1= sorting(arr1);
-    boolean numb= true;
-    while (numb){
-
+  /**
+   *
+   * @param arr1 array to search
+   * @param searchNumber number to search
+   * @return return position of searchNumber or return -1 if can't find it
+   */
+  public static  int  binarySearch(int[] arr1 , int searchNumber) {
+   if (arr1 == null || arr1.length==0 ) return -1 ;
+   return binarySearch(sorting(arr1), searchNumber, 0, arr1.length-1 );
+  }
+// [1, 2, 3,4 ,5,6, 7,8  ]  min =0 , max 3, sear  = 4
+  private static  int  binarySearch(int[] arr1 , int searchNumber, int min , int max ) {
+     int mid = (max+ min )/2 ;
+    if (arr1[mid]==searchNumber ) return  mid;
+    if (min==max ) return -1 ;
+    if (arr1[mid]>searchNumber ) {
+      return   binarySearch(arr1 , searchNumber,  min , mid -1  );
+    }
+    else  {
+      return   binarySearch(arr1 , searchNumber,  mid +1 , max  );
     }
 
-
-
-
   }
 
+  /**
+   * reverse arrays exm :  [1,2,3] exp : [3,2, 1];
+    * @param arr1
+   * @return
+   */
+  public  int[] reverse(int[] arr1) {
+    int arr2[] = new int[arr1.length];
+    return arr1;
+  }
+
+  /**
+   *
+   * @param arr1 given array
+   * @param find find element
+   * @param replace change to 
+   * @return return result
+   */
+  public int [] replace (int[] arr1, int find , int replace  ) {
+    return arr1;
+  }
 
 
 

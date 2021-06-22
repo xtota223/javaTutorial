@@ -24,7 +24,7 @@ public class ArrayTest {
     System.out.println(ArrayUtils.compareElements(arr4,arr5));
     System.out.println(ArrayUtils.sorting(arr1));
     System.out.println(ArrayUtils.copy(arr1, 2,3 ));
-    System.out.println(ArrayUtils.search());
-    System.out.println(ArrayUtils.binarySearch());
+    System.out.println(ArrayUtils.search(arr1, 12));
+    System.out.println(ArrayUtils.binarySearch(arr1, 12));
   }
 }
