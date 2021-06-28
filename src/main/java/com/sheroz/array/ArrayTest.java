@@ -26,5 +26,7 @@ public class ArrayTest {
     System.out.println(ArrayUtils.copy(arr1, 2,3 ));
     System.out.println(ArrayUtils.search(arr1, 12));
     System.out.println(ArrayUtils.binarySearch(arr1, 12));
+    System.out.println(ArrayUtils.reverse(arr1));
+    System.out.println(ArrayUtils.replace(arr1,-1,555));
   }
 }

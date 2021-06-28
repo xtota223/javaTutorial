@@ -262,13 +262,16 @@ public class ArrayUtils {
   }
 
   /**
-   * reverse arrays exm :  [1,2,3] exp : [3,2, 1];
+   * reverse arrays exm :  [1,2,3] exp : [3,2,1];
     * @param arr1
    * @return
    */
-  public  int[] reverse(int[] arr1) {
+  public static int[] reverse(int[] arr1) {
     int arr2[] = new int[arr1.length];
-    return arr1;
+    for (int i=0,d=arr1.length-1; i<arr1.length;i++,d--){
+        arr2[d]=arr1[i];
+    }
+    return arr2;
   }
 
   /**
@@ -278,11 +281,14 @@ public class ArrayUtils {
    * @param replace change to
    * @return return result
    */
-  public int [] replace (int[] arr1, int find , int replace  ) {
-    return arr1;
+  public static int [] replace (int[] arr1, int find , int replace  ) {
+      for (int i = 0; i < arr1.length; i++) {
+          if (arr1[i] == find){
+              arr1[i]=replace;
+          return arr1;
+          }
+      }
+      return null;
   }
-
-
-
 }
 
