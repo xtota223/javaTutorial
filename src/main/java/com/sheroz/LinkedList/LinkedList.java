@@ -120,7 +120,7 @@ public class LinkedList {
    *         (<a href="Collection.html#optional-restrictions">optional</a>)
    */
   public int indexOf(Object o) {
-    return -1 ; 
+    return -1 ;
   }
 
 
