@@ -95,7 +95,14 @@ public class LinkedList {
    * @throws IndexOutOfBoundsException if the index is out of range
    *         ({@code index < 0 || index >= size()})
    */
-  public int  get(int index){
+  public int get(int index){
+    int[] arr1= new int[size];
+    for (int i=0;i<size;i++){
+    arr1[i]=  ;
+    if (i==index){
+      return arr1[i];
+    }
+    }
     return -1;
   }
 
@@ -119,9 +126,19 @@ public class LinkedList {
    *         list does not permit null elements
    *         (<a href="Collection.html#optional-restrictions">optional</a>)
    */
-  public int indexOf(Object o) {
-    return -1 ;
+  public int indexOf(Object o){
+    int[] arr1= new int[size];
+    int i=0;
+    Node current  =  root ;
+    while (current !=null){
+     i++;
+     arr1[i]= current.getData();
+     current = current.getNext();
+     if (arr1[i]==o){
+        return i;
+      }
+    }
+    return -1;
   }
-
 
 }

@@ -18,7 +18,7 @@ public class LinkSetTest {
       ls.add(i);
     }
     ls.printMe();
-
+    System.out.println(ls.get(2));
   }
 
 }
