@@ -18,7 +18,21 @@ public class LinkSetTest {
       ls.add(i);
     }
     ls.printMe();
-    System.out.println(ls.get(2));
+    System.out.println(ls.get(20));
+    System.out.println(ls.indexOf(-20));
+
+    // ===
+    ls.replaceIndex(2, 5);
+
+    System.out.println(ls.get(5) == 2);
+
+    ls.replace(12, 22 );
+    System.out.println(ls.get(22) == 4);
+
+
+    ls.clear();
+    System.out.println(ls.size() ==0  );
+    System.out.println(ls.get(2) == -1);
   }
 
 }

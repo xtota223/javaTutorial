@@ -96,14 +96,15 @@ public class LinkedList {
    *         ({@code index < 0 || index >= size()})
    */
   public int get(int index){
-    int[] arr1= new int[size];
-    for (int i=0;i<size;i++){
-    arr1[i]=  ;
-    if (i==index){
-      return arr1[i];
+    int cur =0 ;
+    if (root == null) return -1;
+    Node current  =  root ;
+    while ( cur != index ) {
+      current = current.getNext();
+      if (current== null) return -1 ;
+      cur++;
     }
-    }
-    return -1;
+    return current.getData();
   }
 
 
@@ -126,19 +127,62 @@ public class LinkedList {
    *         list does not permit null elements
    *         (<a href="Collection.html#optional-restrictions">optional</a>)
    */
-  public int indexOf(Object o){
-    int[] arr1= new int[size];
-    int i=0;
+  public int indexOf(int  o){
+    int cur =0 ;
+    if (root == null) return -1;
     Node current  =  root ;
-    while (current !=null){
-     i++;
-     arr1[i]= current.getData();
-     current = current.getNext();
-     if (arr1[i]==o){
-        return i;
-      }
+    while (current.getData()!=o ) {
+      current = current.getNext();
+      if (current== null) return -1 ;
+      cur++;
     }
-    return -1;
+    return current.getData()==o? cur: -1 ;
   }
 
+
+
+  /**
+   * Returns the index of the last occurrence of the specified element
+   * in this list, or -1 if this list does not contain the element.
+   * More formally, returns the highest index {@code i} such that
+   * {@code Objects.equals(o, get(i))},
+   * or -1 if there is no such index.
+   *
+   * @param o element to search for
+   * @return the index of the last occurrence of the specified element in
+   *         this list, or -1 if this list does not contain the element
+   * @throws ClassCastException if the type of the specified element
+   *         is incompatible with this list
+   *         (<a href="Collection.html#optional-restrictions">optional</a>)
+   * @throws NullPointerException if the specified element is null and this
+   *         list does not permit null elements
+   *         (<a href="Collection.html#optional-restrictions">optional</a>)
+   */
+  int lastIndexOf(int  v ) {
+    return -1 ;
+  }
+
+
+
+  /**
+   * Removes all of the elements from this list (optional operation).
+   * The list will be empty after this call returns.
+   *
+   * @throws UnsupportedOperationException if the {@code clear} operation
+   *         is not supported by this list
+   */
+  void clear(){
+
+  }
+
+
+
+  int replaceIndex (int index ,  int replace  ){
+    
+    return -1 ;
+  }
+
+  int replace (int find ,  int replace  ){
+    return -1 ;
+  }
 }
