@@ -1,5 +1,7 @@
 package com.sheroz.LinkedList;
 
+import com.sun.org.apache.xpath.internal.objects.XNull;
+
 import java.util.List;
 
 public class LinkedList {
@@ -171,18 +173,42 @@ public class LinkedList {
    * @throws UnsupportedOperationException if the {@code clear} operation
    *         is not supported by this list
    */
-  void clear(){
-
+   void clear(){
+     root=null;
+    Node current = root;
+    while (lastElement().getNext()!= null){
+   //   current.setData(root);
+      current = current.getNext();
+    }
   }
 
 
 
   int replaceIndex (int index ,  int replace  ){
-    
+    Node current = root;
+    int cur = 0;
+    while (cur!=index+1){
+      if (cur == index) {
+        current.setData(replace);
+        return cur;
+      }
+      cur++;
+      current = current.getNext();
+    }
     return -1 ;
   }
 
   int replace (int find ,  int replace  ){
+    Node current = root;
+    int cur = 0;
+    while (current != null){
+      if (current.getData() == find) {
+        current.setData(replace);
+        return cur;
+      }
+      cur++;
+      current = current.getNext();
+    }
     return -1 ;
   }
 }

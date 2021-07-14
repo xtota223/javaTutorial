@@ -21,9 +21,12 @@ public class LinkSetTest {
     System.out.println(ls.get(20));
     System.out.println(ls.indexOf(-20));
 
+    System.out.println("----------------");
     // ===
-    ls.replaceIndex(2, 5);
+    ls.lastIndexOf(2);
+    System.out.println(ls.get(2)==0);
 
+    ls.replaceIndex(2, 5);
     System.out.println(ls.get(5) == 2);
 
     ls.replace(12, 22 );
@@ -31,7 +34,7 @@ public class LinkSetTest {
 
 
     ls.clear();
-    System.out.println(ls.size() ==0  );
+    System.out.println(ls.size() ==0);
     System.out.println(ls.get(2) == -1);
   }
 
