@@ -27,10 +27,12 @@ public class LinkSetTest {
     System.out.println(ls.get(2)==0);
 
     ls.replaceIndex(2, 5);
-    System.out.println(ls.get(5) == 2);
+    ls.printMe();
+    System.out.println(ls.get(2)  + "  " + (ls.get(2) == 5));
 
     ls.replace(12, 22 );
-    System.out.println(ls.get(22) == 4);
+    ls.printMe();
+    System.out.println(ls.indexOf (22) == 4);
 
 
     ls.clear();

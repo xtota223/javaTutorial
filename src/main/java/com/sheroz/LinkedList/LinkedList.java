@@ -175,11 +175,7 @@ public class LinkedList {
    */
    void clear(){
      root=null;
-    Node current = root;
-    while (lastElement().getNext()!= null){
-   //   current.setData(root);
-      current = current.getNext();
-    }
+     size=0 ;
   }
 
 
