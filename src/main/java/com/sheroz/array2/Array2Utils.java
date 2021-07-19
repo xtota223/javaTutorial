@@ -15,19 +15,43 @@ public class Array2Utils {
   }
 
   static int sum (int[][] arr1) {
-    return -1 ;
+    int sum=0;
+   for (int i=0;i<arr1.length;i++){
+     for (int d=0;d<arr1.length;d++){
+       sum += arr1[i][d];
+     }
+   }
+   return sum;
   }
 
   static int sumRow(int[][] arr1, int rowIndex) {
-    return -1 ;
+    int sum=0;
+    for (int i=0;i< arr1.length;i++){
+      sum += arr1[rowIndex][i];
+    }
+    return sum ;
   }
 
   static int max (int[][] arr1) {
-    return -1 ;
+    int max=0;
+    for (int i = 0;i <arr1.length;i++){
+      for (int d = 0;d<arr1.length;d++){
+        arr1[i][d]//????????
+      }
+    }
+    return -1;
   }
 
   static int maxRow (int[][] arr1, int rowIndex) {
-    return -1 ;
+    int Cmax=0;
+    int Rmax=0;
+    for (int i=0; i< arr1.length-1;i++){
+      Cmax = arr1[rowIndex][0] + arr1[rowIndex][i+1];
+      if (Cmax >= Rmax){
+        Rmax=Cmax;
+      }
+    }
+    return Rmax ;
   }
 
 }

@@ -160,7 +160,7 @@ public class LinkedList {
    *         list does not permit null elements
    *         (<a href="Collection.html#optional-restrictions">optional</a>)
    */
-  int lastIndexOf(int  v ) {
+  int lastIndexOf(int  o ) {
     return -1 ;
   }
 
