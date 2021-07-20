@@ -17,7 +17,7 @@ public class Array2Utils {
   static int sum (int[][] arr1) {
     int sum=0;
    for (int i=0;i<arr1.length;i++){
-     for (int d=0;d<arr1.length;d++){
+     for (int d=0;d<arr1[i].length;d++){
        sum += arr1[i][d];
      }
    }
@@ -33,13 +33,13 @@ public class Array2Utils {
   }
 
   static int max (int[][] arr1) {
-    int max=0;
+    int max=arr1[0][0];
     for (int i = 0;i <arr1.length;i++){
-      for (int d = 0;d<arr1.length;d++){
-        arr1[i][d]//????????
+      for (int d = 0;d<arr1[i].length;d++){
+        if (max<arr1[i][d]) max= arr1[i][d];
       }
     }
-    return -1;
+    return max;
   }
 
   static int maxRow (int[][] arr1, int rowIndex) {
@@ -53,5 +53,7 @@ public class Array2Utils {
     }
     return Rmax ;
   }
+
+
 
 }
