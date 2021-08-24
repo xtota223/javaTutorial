@@ -11,6 +11,7 @@ public class Box15Test {
     game.printMe();
     System.out.printf(" can change : " + game.swap(2, 3, 3,3 ));
     System.out.printf(" can change : " + game.swap(0, 3, 3,3 ));
+    System.out.println();
     game.printMe();
 
 
