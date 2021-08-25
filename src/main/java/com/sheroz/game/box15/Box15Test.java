@@ -9,11 +9,15 @@ public class Box15Test {
 
     game.prepareNumber();
     game.printMe();
-    System.out.printf(" can change : " + game.swap(2, 3, 3,3 ));
-    System.out.printf(" can change : " + game.swap(0, 3, 3,3 ));
+    System.out.println(" can change : " + game.canSwap(2, 3, 3,3 ));
+    System.out.println(" can change : " + game.canSwap(0, 3, 3,3 ));
     System.out.println();
+    System.out.println( "is end of game:  " + game.isEndOfGame() );
     game.printMe();
+    System.out.println("Start game ");
+    game.start();
 
+    game.printMe();
 
   }
 
