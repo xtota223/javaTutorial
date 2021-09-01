@@ -12,13 +12,12 @@ public class Box15Test {
     System.out.println(" can change : " + game.canSwap(2, 3, 3,3 ));
     System.out.println(" can change : " + game.canSwap(0, 3, 3,3 ));
     System.out.println();
-    System.out.println( "is end of game:  " + game.isEndOfGame() );
+    System.out.println( "is end of game:  " + game.IsEndOfTheGame() );
     game.printMe();
     System.out.println("Start game ");
     game.start();
 
     game.printMe();
-
   }
 
 }
