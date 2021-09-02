@@ -5,6 +5,8 @@ import java.util.Random;
 public class Box15 {
   private final int[][] gameBox;
   private int steps = 0;
+  private int emptyPosX0 ;
+  private int emptyPosX1 ;
 
   public Box15(int size) {
     gameBox = new int[size][size];
@@ -51,6 +53,8 @@ public class Box15 {
     check if one of element equal to 0
    */
   public boolean canSwap(int x0, int x1, int y0, int y1) {
+    if (x0 <0 || x1<0 ) return false;
+    if (x0>= gameBox.length || x1>= gameBox.length ) return false;
     if (gameBox[x0][x1]==0){
       if (x0-y0 == +-1||x1-y1 == +-1){
         return true;
@@ -65,30 +69,73 @@ public class Box15 {
   }
 
 
+  /*
+   check if one of element equal to 0
+  */
+  public boolean canSwap(String direction ) {
+    int x1=emptyPosX1 , x0=emptyPosX0;
+    switch (direction) {
+      case "up": x1--;
+        break;
+      case "down": x1++;
+        break;
+      case "left" : x0--;
+        break;
+      case "right": x0++;
+        break;
+    }
+    return canSwap(x0,x1, emptyPosX0, emptyPosX1   );
+  }
 
 
 
   public void swap(int x0, int x1, int y0, int y1) {
     int tmp = gameBox[x0][x1];
+
     gameBox[x0][x1] = gameBox[y0][y1];
     gameBox[y0][y1] = tmp;
+    if (gameBox[y0][y1]==0) {
+      emptyPosX0=y0;
+      emptyPosX1=y1;
+    }
+    if (gameBox[x0][x1]==0) {
+      emptyPosX0=x0;
+      emptyPosX1=x1;
+    }
   }
+
+  public void swap(String direction) {
+    int x1=emptyPosX1 , x0=emptyPosX0;
+    switch (direction) {
+      case "up": x1--;
+        break;
+      case "down": x1++;
+        break;
+      case "left" : x0--;
+        break;
+      case "right": x0++;
+        break;
+    }
+    swap(x0,x1, emptyPosX0, emptyPosX1   );
+  }
+
 
   /*
     check if elements  in order  except last one
    */
   public boolean IsEndOfTheGame() {
     int count=1;
-    for (int i=0;i<gameBox.length;i++){
-      for (int j =0;j<gameBox.length;j++){
-        if (gameBox[i][j] == count)
+    for (int[] box : gameBox) {
+      for (int j = 0; j < gameBox.length; j++) {
+        if (box[j] == count) {
           count++;
+        } else {
+          return false;
         }
       }
-    if (count-1 == gameBox[gameBox.length-1][gameBox.length-2] && gameBox[gameBox.length-1][gameBox.length-1] ==0){
-      return true;
     }
-    return false;
+
+    return count - 1 == (gameBox.length * gameBox.length - 1);
   }
 }
 
