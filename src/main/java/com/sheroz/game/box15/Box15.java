@@ -75,13 +75,13 @@ public class Box15 {
   public boolean canSwap(String direction ) {
     int x1=emptyPosX1 , x0=emptyPosX0;
     switch (direction) {
-      case "up": x1--;
+      case "up": x0--;
         break;
-      case "down": x1++;
+      case "down": x0++;
         break;
-      case "left" : x0--;
+      case "left" : x1--;
         break;
-      case "right": x0++;
+      case "right": x1++;
         break;
     }
     return canSwap(x0,x1, emptyPosX0, emptyPosX1   );
@@ -107,13 +107,13 @@ public class Box15 {
   public void swap(String direction) {
     int x1=emptyPosX1 , x0=emptyPosX0;
     switch (direction) {
-      case "up": x1--;
+      case "up": x0--;
         break;
-      case "down": x1++;
+      case "down": x0++;
         break;
-      case "left" : x0--;
+      case "left" : x1--;
         break;
-      case "right": x0++;
+      case "right": x1++;
         break;
     }
     swap(x0,x1, emptyPosX0, emptyPosX1   );
