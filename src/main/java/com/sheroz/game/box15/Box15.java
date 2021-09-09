@@ -56,12 +56,12 @@ public class Box15 {
     if (x0 <0 || x1<0 ) return false;
     if (x0>= gameBox.length || x1>= gameBox.length ) return false;
     if (gameBox[x0][x1]==0){
-      if (x0-y0 == +-1||x1-y1 == +-1){
+      if (Math.abs( x0-y0) == 1 || Math.abs(x1-y1) == 1){
         return true;
       }
     }
     else if (gameBox[y0][y1]==0) {
-      if (x0 - y0 == +-1 || x1 - y1 == +-1) {
+      if (Math.abs( x0 - y0) == 1 || Math.abs( x1 - y1) == 1) {
         return true;
       }
     }
